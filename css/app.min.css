@@ -134,6 +134,25 @@ svg {
   }
 }
 
+.input-field.is--error .input-field__input {
+  color: #F91045;
+  border-color: #F91045;
+}
+.input-field.is--error .input-field__input::-webkit-input-placeholder {
+  color: #F91045;
+}
+.input-field.is--error .input-field__input::-moz-placeholder {
+  color: #F91045;
+}
+.input-field.is--error .input-field__input:-ms-input-placeholder {
+  color: #F91045;
+}
+.input-field.is--error .input-field__input::-ms-input-placeholder {
+  color: #F91045;
+}
+.input-field.is--error .input-field__input::placeholder {
+  color: #F91045;
+}
 .input-field__inner {
   position: relative;
   z-index: 1;
@@ -157,8 +176,29 @@ svg {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+.input-field__input::-webkit-input-placeholder, .input-field__textarea::-webkit-input-placeholder {
+  opacity: 1;
+  color: #4F2549;
+}
+.input-field__input::-moz-placeholder, .input-field__textarea::-moz-placeholder {
+  opacity: 1;
+  color: #4F2549;
+}
+.input-field__input:-ms-input-placeholder, .input-field__textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #4F2549;
+}
+.input-field__input::-ms-input-placeholder, .input-field__textarea::-ms-input-placeholder {
+  opacity: 1;
+  color: #4F2549;
+}
+.input-field__input::placeholder, .input-field__textarea::placeholder {
+  opacity: 1;
+  color: #4F2549;
+}
 .input-field__input:focus, .input-field__textarea:focus {
   outline: none;
+  border-color: #4F2549;
 }
 .input-field__textarea {
   overflow: hidden;
@@ -608,6 +648,25 @@ svg {
 .c-newsletter__form {
   width: 100%;
 }
+.c-newsletter__form.is--error .c-newsletter__input {
+  color: #F91045;
+  border-color: #F91045;
+}
+.c-newsletter__form.is--error .c-newsletter__input::-webkit-input-placeholder {
+  color: #F91045;
+}
+.c-newsletter__form.is--error .c-newsletter__input::-moz-placeholder {
+  color: #F91045;
+}
+.c-newsletter__form.is--error .c-newsletter__input:-ms-input-placeholder {
+  color: #F91045;
+}
+.c-newsletter__form.is--error .c-newsletter__input::-ms-input-placeholder {
+  color: #F91045;
+}
+.c-newsletter__form.is--error .c-newsletter__input::placeholder {
+  color: #F91045;
+}
 .c-newsletter__inner {
   position: relative;
   z-index: 1;
@@ -618,7 +677,7 @@ svg {
      -moz-appearance: none;
           appearance: none;
   display: block;
-  padding: 16.5px 120px 16.5px 30px;
+  padding: 18.5px 120px 18.5px 30px;
   width: 100%;
   font-size: 18px;
   font-weight: 600;
@@ -626,7 +685,7 @@ svg {
   letter-spacing: -0.72px;
   color: #4F2549;
   background: #FFFFFF;
-  border: 3px solid #FFFFFF;
+  border: 1px solid #FFFFFF;
   border-radius: 65px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
