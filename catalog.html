@@ -164,7 +164,7 @@
 						</ul>
 					</div>
 					<div class="catalog__wrapper section-indent">
-						<a href="#" class="catalog-card catalog__item">
+						<a href="#" class="catalog-card catalog__item product-card-btn">
 							<picture class="catalog-card__img">
 								<img src="img/catalog-01.png" alt="Image">
 							</picture>
@@ -173,7 +173,7 @@
 								<span class="catalog-card__description">Жевательный мармелад в виде маленьких разноцветных мишек из детства. </span>
 							</div>
 						</a>
-						<a href="#" class="catalog-card catalog__item">
+						<a href="#" class="catalog-card catalog__item product-card-btn">
 							<picture class="catalog-card__img">
 								<img src="img/catalog-02.png" alt="Image">
 							</picture>
@@ -182,7 +182,7 @@
 								<span class="catalog-card__description">Жевательный мармелад в виде маленьких разноцветных мишек из детства. </span>
 							</div>
 						</a>
-						<a href="#" class="catalog-card catalog__item">
+						<a href="#" class="catalog-card catalog__item product-card-btn">
 							<picture class="catalog-card__img">
 								<img src="img/catalog-03.png" alt="Image">
 							</picture>
@@ -191,7 +191,7 @@
 								<span class="catalog-card__description">Жевательный мармелад в виде маленьких разноцветных мишек из детства. </span>
 							</div>
 						</a>
-						<a href="#" class="catalog-card catalog__item">
+						<a href="#" class="catalog-card catalog__item product-card-btn">
 							<picture class="catalog-card__img">
 								<img src="img/catalog-01.png" alt="Image">
 							</picture>
@@ -200,7 +200,7 @@
 								<span class="catalog-card__description">Жевательный мармелад в виде маленьких разноцветных мишек из детства. </span>
 							</div>
 						</a>
-						<a href="#" class="catalog-card catalog__item">
+						<a href="#" class="catalog-card catalog__item product-card-btn">
 							<picture class="catalog-card__img">
 								<img src="img/catalog-02.png" alt="Image">
 							</picture>
@@ -209,7 +209,7 @@
 								<span class="catalog-card__description">Жевательный мармелад в виде маленьких разноцветных мишек из детства. </span>
 							</div>
 						</a>
-						<a href="#" class="catalog-card catalog__item">
+						<a href="#" class="catalog-card catalog__item product-card-btn">
 							<picture class="catalog-card__img">
 								<img src="img/catalog-03.png" alt="Image">
 							</picture>
@@ -218,7 +218,7 @@
 								<span class="catalog-card__description">Жевательный мармелад в виде маленьких разноцветных мишек из детства. </span>
 							</div>
 						</a>
-						<a href="#" class="catalog-card catalog__item">
+						<a href="#" class="catalog-card catalog__item product-card-btn">
 							<picture class="catalog-card__img">
 								<img src="img/catalog-01.png" alt="Image">
 							</picture>
@@ -227,7 +227,7 @@
 								<span class="catalog-card__description">Жевательный мармелад в виде маленьких разноцветных мишек из детства. </span>
 							</div>
 						</a>
-						<a href="#" class="catalog-card catalog__item">
+						<a href="#" class="catalog-card catalog__item product-card-btn">
 							<picture class="catalog-card__img">
 								<img src="img/catalog-02.png" alt="Image">
 							</picture>
@@ -236,7 +236,7 @@
 								<span class="catalog-card__description">Жевательный мармелад в виде маленьких разноцветных мишек из детства. </span>
 							</div>
 						</a>
-						<a href="#" class="catalog-card catalog__item">
+						<a href="#" class="catalog-card catalog__item product-card-btn">
 							<picture class="catalog-card__img">
 								<img src="img/catalog-03.png" alt="Image">
 							</picture>
@@ -335,6 +335,52 @@
 		<div class="menu__wrap"> </div>
 	</div>
 	<!-- end of menu -->
+	<!-- product card -->
+	<div class="product-card" id="product-card">
+		<div class="product-card__wrap">
+			<div class="product-card__wrapper">
+				<button class="product-card__close" aria-label="Закрыть">
+					<svg>
+						<use xlink:href="img/sprite.svg#icon-close-wide"></use>
+					</svg>
+				</button>
+				<div class="product-card__main">
+					<div class="product-card__body">
+						<picture class="product-card__logotype">
+							<img src="img/minicco.svg" alt="MINICCO">
+						</picture>
+						<h2 class="product-card__title">mINICCO. мишки</h2>
+						<div class="product-card__content">
+							<p>Мармеладные фигурки — это вкусное и ароматное лакомство, которое подойдет и для детей, и для взрослых. Фигурный мармелад радует глаз яркими и сочными цветами, а его нежная текстура позволяет насладиться каждым кусочком. </p>
+						</div>
+						<div class="product-card__buttons">
+							<a href="#" class="product-card__btn btn btn--sm btn--white-light">Ozon</a>
+							<a href="#" class="product-card__btn btn btn--sm btn--white-light">Wildberries</a>
+							<a href="#" class="product-card__btn product-card__btn--mobile-wide btn btn--sm">Оставить заявку</a>
+						</div>
+					</div>
+					<div class="product-card__slider">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<picture class="product-card__img">
+										<img src="img/product-01.jpg" alt="Image">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture class="product-card__img">
+										<img src="img/product-01.jpg" alt="Image">
+									</picture>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of product card -->
 	<!-- scripts -->
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
