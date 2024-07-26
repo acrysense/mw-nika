@@ -103,10 +103,16 @@
 								</div>
 								<div class="swiper-slide">
 									<div class="gallery__slide">
-										<div class="gallery__video">
-											<video poster="img/gallery-02.jpg" loop muted playsinline>
-												<source src="video/gallery-01.mp4" type="video/mp4">
-											</video>
+										<div class="content-video gallery__video">
+											<div class="content-video__media">
+												<img src="img/gallery-02.jpg" alt="Image">
+												<svg class="content-video__play">
+													<use xlink:href="img/sprite.svg#icon-play"></use>
+												</svg>
+											</div>
+											<div class="content-video__media-iframe">
+												<iframe data-src="https://www.youtube.com/embed/gijKKRvvCTM?si=baMNTC5s_rytfY-N" width="100%" height="100%" allow="autoplay; encrypted-media; picture-in-picture;" frameborder="0" allowfullscreen></iframe>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -194,27 +200,27 @@
 					</div>
 					<div class="news__wrapper">
 						<div class="news-card news__item">
-							<picture class="news-card__img">
+							<a href="#" class="news-card__img">
 								<img src="img/news-02.jpg" alt="Image">
-							</picture>
+							</a>
 							<div class="news-card__body">
 								<div class="news-card__inner">
 									<span class="news-card__date">01.01.24</span>
 									<span class="news-card__tag">Событие</span>
 								</div>
-								<h3 class="news-card__title">Телевизионный конкурс <br>детских талантов</h3>
+								<a href="#" class="news-card__title">Телевизионный конкурс <br>детских талантов</a>
 							</div>
 						</div>
 						<div class="news-card news__item">
-							<picture class="news-card__img">
+							<a href="#" class="news-card__img">
 								<img src="img/news-03.jpg" alt="Image">
-							</picture>
+							</a>
 							<div class="news-card__body">
 								<div class="news-card__inner">
 									<span class="news-card__date">01.01.24</span>
 									<span class="news-card__tag">Акция</span>
 								</div>
-								<h3 class="news-card__title">Коллаборация с онлайн-кинотеатром IVI</h3>
+								<a href="#" class="news-card__title">Коллаборация с онлайн-кинотеатром IVI</a>
 							</div>
 						</div>
 					</div>
