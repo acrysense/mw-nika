@@ -953,6 +953,10 @@ svg {
   z-index: 600;
   margin: 15px 0;
 }
+.header.is--menu .header__group {
+  opacity: 0;
+  pointer-events: none;
+}
 @media screen and (max-width: 743px) {
   .header {
     margin: 10px 0;
@@ -1014,6 +1018,8 @@ svg {
 .header__group {
   max-width: 681px;
   width: 100%;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
   .header__group {
