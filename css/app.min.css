@@ -17,7 +17,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: local("Onest"), url("../fonts/Onest/Onest-Semibold.woff2") format("woff2"), url("../fonts/Onest/Onest-Semibold.woff") format("woff"), url("../fonts/Onest/Onest-Semibold.eot") format("embedded-opentype");
+  src: local("Onest"), url("../fonts/Onest/Onest-SemiBold.woff2") format("woff2"), url("../fonts/Onest/Onest-SemiBold.woff") format("woff"), url("../fonts/Onest/Onest-SemiBold.eot") format("embedded-opentype");
 }
 @font-face {
   font-family: "Onest";
@@ -2823,10 +2823,8 @@ svg {
   margin: 53px auto 0;
   max-width: 409px;
   width: 100%;
-  leading-trim: both;
-  text-edge: cap;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5;
   letter-spacing: -0.18px;
 }
@@ -4201,6 +4199,77 @@ svg {
     letter-spacing: -0.34px;
   }
 }
+.brands-card__circle {
+  position: absolute;
+  z-index: -1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  display: block;
+  border-radius: 50%;
+  pointer-events: none;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.brands-card__circle--big-yellow {
+  bottom: 135px;
+  left: -36px;
+  width: 171px;
+  height: 169px;
+  background: radial-gradient(79.04% 79.04% at 25.83% 32.91%, #FFF1A0 0%, #FFE55B 10%, #FFDC2A 17%, #FFD70B 22%, #FFD500 25%, #FDC700 42%, #F6A300 64%, #F59F00 65%, #EF8900 75%, #EE8100 81%, #F18E00 88%, #F9B100 100%);
+  -webkit-filter: blur(7.9800000191px);
+          filter: blur(7.9800000191px);
+}
+.brands-card__circle--sm-yellow {
+  top: 41px;
+  right: 218px;
+  width: 40px;
+  height: 39px;
+  background: radial-gradient(79.04% 79.04% at 25.83% 32.91%, #FFF1A0 0%, #FFE55B 10%, #FFDC2A 17%, #FFD70B 22%, #FFD500 25%, #FDC700 42%, #F6A300 64%, #F59F00 65%, #EF8900 75%, #EE8100 81%, #F18E00 88%, #F9B100 100%);
+  -webkit-filter: blur(2.5px);
+          filter: blur(2.5px);
+}
+.brands-card__circle--big-purple {
+  top: -101px;
+  left: 135px;
+  width: 203px;
+  height: 201px;
+  background: radial-gradient(76.57% 76.57% at 29.03% 38.22%, #DA9DC6 0%, #C44E97 20%, #BD3687 30%, #B82078 42%, #B61F75 43%, #A11A50 59%, #9A1842 67%, #7D152C 87%, #821530 92%, #92173C 98%, #9A1842 100%);
+  -webkit-filter: blur(12.9799995422px);
+          filter: blur(12.9799995422px);
+}
+.brands-card__circle--sm-purple {
+  right: 63px;
+  bottom: 209px;
+  width: 81px;
+  height: 80px;
+  background: radial-gradient(76.57% 76.57% at 29.03% 38.22%, #DA9DC6 0%, #C44E97 20%, #BD3687 30%, #B82078 42%, #B61F75 43%, #A11A50 59%, #9A1842 67%, #7D152C 87%, #821530 92%, #92173C 98%, #9A1842 100%);
+}
+@media screen and (max-width: 743px) {
+  .brands-card__circle--big-yellow {
+    bottom: 227.5px;
+    left: -37px;
+    width: 131px;
+    height: 129px;
+  }
+  .brands-card__circle--sm-yellow {
+    top: 151px;
+    right: 36px;
+    width: 31px;
+    height: 30px;
+  }
+  .brands-card__circle--big-purple {
+    top: -28px;
+    left: 30px;
+    width: 155px;
+    height: 154px;
+  }
+  .brands-card__circle--sm-purple {
+    right: 26px;
+    bottom: 327px;
+    width: 62px;
+    height: 61px;
+  }
+}
 
 .brands-inner__wrap {
   position: relative;
@@ -4390,6 +4459,75 @@ svg {
     font-weight: normal;
     line-height: 1.0882352941;
     letter-spacing: -0.34px;
+  }
+}
+.brands-inner__circle {
+  position: absolute;
+  z-index: -1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  display: block;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.brands-inner__circle--big-yellow {
+  bottom: 135px;
+  left: -36px;
+  width: 171px;
+  height: 169px;
+  background: radial-gradient(79.04% 79.04% at 25.83% 32.91%, #FFF1A0 0%, #FFE55B 10%, #FFDC2A 17%, #FFD70B 22%, #FFD500 25%, #FDC700 42%, #F6A300 64%, #F59F00 65%, #EF8900 75%, #EE8100 81%, #F18E00 88%, #F9B100 100%);
+  -webkit-filter: blur(7.9800000191px);
+          filter: blur(7.9800000191px);
+}
+.brands-inner__circle--sm-yellow {
+  top: 41px;
+  right: 218px;
+  width: 40px;
+  height: 39px;
+  background: radial-gradient(79.04% 79.04% at 25.83% 32.91%, #FFF1A0 0%, #FFE55B 10%, #FFDC2A 17%, #FFD70B 22%, #FFD500 25%, #FDC700 42%, #F6A300 64%, #F59F00 65%, #EF8900 75%, #EE8100 81%, #F18E00 88%, #F9B100 100%);
+  -webkit-filter: blur(2.5px);
+          filter: blur(2.5px);
+}
+.brands-inner__circle--big-purple {
+  top: -101px;
+  left: 135px;
+  width: 203px;
+  height: 201px;
+  background: radial-gradient(76.57% 76.57% at 29.03% 38.22%, #DA9DC6 0%, #C44E97 20%, #BD3687 30%, #B82078 42%, #B61F75 43%, #A11A50 59%, #9A1842 67%, #7D152C 87%, #821530 92%, #92173C 98%, #9A1842 100%);
+  -webkit-filter: blur(12.9799995422px);
+          filter: blur(12.9799995422px);
+}
+.brands-inner__circle--sm-purple {
+  right: 63px;
+  bottom: 209px;
+  width: 81px;
+  height: 80px;
+  background: radial-gradient(76.57% 76.57% at 29.03% 38.22%, #DA9DC6 0%, #C44E97 20%, #BD3687 30%, #B82078 42%, #B61F75 43%, #A11A50 59%, #9A1842 67%, #7D152C 87%, #821530 92%, #92173C 98%, #9A1842 100%);
+}
+@media screen and (max-width: 743px) {
+  .brands-inner__circle--big-yellow {
+    bottom: 227.5px;
+    left: -37px;
+    width: 131px;
+    height: 129px;
+  }
+  .brands-inner__circle--sm-yellow {
+    top: 151px;
+    right: 36px;
+    width: 31px;
+    height: 30px;
+  }
+  .brands-inner__circle--big-purple {
+    top: -28px;
+    left: 30px;
+    width: 155px;
+    height: 154px;
+  }
+  .brands-inner__circle--sm-purple {
+    right: 26px;
+    bottom: 327px;
+    width: 62px;
+    height: 61px;
   }
 }
 
