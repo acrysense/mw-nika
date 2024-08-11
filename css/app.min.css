@@ -703,7 +703,7 @@ svg {
 .container {
   margin: 0 auto;
   padding: 0 50px;
-  max-width: 1440px;
+  max-width: 1920px;
   width: 100%;
 }
 @media screen and (min-width: 375px) and (max-width: 743px) {
@@ -1628,6 +1628,7 @@ svg {
       -ms-flex-pack: end;
           justify-content: flex-end;
   overflow: hidden;
+  margin: 0 -35px;
   padding: 30px 35px;
   min-height: calc(100dvh - 30px);
   border-radius: 20px;
@@ -1689,6 +1690,16 @@ svg {
     height: 794px;
   }
 }
+@media screen and (min-width: 375px) and (max-width: 743px) {
+  .menu__wrap {
+    margin: 0 -20px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .menu__wrap {
+    margin: 0 -10px;
+  }
+}
 .menu__nav {
   overflow: hidden;
   margin: 0 auto;
@@ -1718,14 +1729,14 @@ svg {
           align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-right: -30px;
-  margin-bottom: -35px;
+  margin-right: -25px;
+  margin-bottom: -30px;
   width: 100%;
 }
 @media screen and (min-width: 744px) and (max-width: 1199px) {
   .menu__list {
     margin-right: -55px;
-    margin-bottom: -55px;
+    margin-bottom: -50px;
   }
 }
 @media screen and (max-width: 743px) {
@@ -1734,18 +1745,13 @@ svg {
   }
 }
 .menu__item {
-  margin-right: 30px;
-  margin-bottom: 35px;
+  margin-right: 25px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 744px) and (max-width: 1199px) {
   .menu__item {
     margin-right: 55px;
-    margin-bottom: 55px;
-  }
-}
-@media screen and (max-width: 743px) {
-  .menu__item {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
 }
 .menu__link {
@@ -1756,7 +1762,7 @@ svg {
   font-family: "TTBerlinerins", sans-serif;
   font-size: 54px;
   font-weight: normal;
-  line-height: 1;
+  line-height: 1.25;
   letter-spacing: -0.54px;
   color: #FFFFFF;
 }
@@ -1768,6 +1774,7 @@ svg {
     color: #F91045;
   }
 }
+
 .product-card {
   position: fixed;
   top: 0;
@@ -2250,7 +2257,7 @@ svg {
   letter-spacing: -0.72px;
   color: #4F2549;
   background: #FFFFFF;
-  border: 1px solid #FFFFFF;
+  border: 3px solid #FFFFFF;
   border-radius: 65px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -2296,7 +2303,7 @@ svg {
   padding: 0;
   min-width: 100px;
   width: 100px;
-  height: 62px;
+  height: 66px;
   font-size: 0;
   background: transparent;
   border: 3px solid #4F2549;
@@ -3301,6 +3308,7 @@ svg {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-variant-numeric: lining-nums tabular-nums;
   font-size: 22px;
   font-weight: 600;
   line-height: 1;
@@ -3706,6 +3714,7 @@ svg {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  font-variant-numeric: lining-nums tabular-nums;
   font-size: 22px;
   font-weight: 600;
   line-height: 1;
@@ -3967,6 +3976,9 @@ svg {
   }
 }
 .brands__item {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3984,6 +3996,20 @@ svg {
   min-height: 613px;
   background: #F3EDF3;
   border-radius: 20px;
+}
+@media screen and (hover: hover) {
+  .brands__item:hover {
+    background: var(--hover-bg, #F91045);
+  }
+  .brands__item:hover .brands__img-default {
+    opacity: 0;
+  }
+  .brands__item:hover .brands__img-hover {
+    opacity: 1;
+  }
+  .brands__item:hover .brands__value {
+    opacity: 1;
+  }
 }
 @media screen and (min-width: 1200px) {
   .brands__item:first-child {
@@ -4048,6 +4074,50 @@ svg {
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+}
+@media screen and (hover: hover) {
+  .brands__img img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    max-width: calc(100% - 100px);
+    max-height: calc(100% - 200px);
+    -webkit-transition: opacity 0.25s ease-in-out;
+    transition: opacity 0.25s ease-in-out;
+  }
+  .brands__img img.brands__img-hover {
+    opacity: 0;
+  }
+}
+@media screen and (hover: none) {
+  .brands__img img.brands__img-hover {
+    display: none;
+  }
+}
+.brands__value {
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  z-index: 1;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  display: block;
+  max-width: calc(100% - 40px);
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.18px;
+  text-align: center;
+  color: #FFFFFF;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .brands-card {
@@ -6140,10 +6210,12 @@ svg {
 
 .not-found {
   margin-top: -127px;
+  padding-bottom: 15px;
 }
 @media screen and (max-width: 743px) {
   .not-found {
     margin-top: -77px;
+    padding-bottom: 10px;
   }
 }
 .not-found__wrap {
@@ -6263,6 +6335,9 @@ svg {
   letter-spacing: -0.64px;
   color: #4F2549;
 }
+.not-found__title--red {
+  color: #F91045;
+}
 @media screen and (max-width: 743px) {
   .not-found__title {
     font-family: "TTBerlinerins", sans-serif;
@@ -6272,9 +6347,12 @@ svg {
     letter-spacing: -0.34px;
   }
 }
+.not-found__title + .not-found__description {
+  margin-top: 10px;
+}
 .not-found__description {
   display: block;
-  margin: 10px auto 0;
+  margin: 0 auto;
   max-width: 490px;
   width: 100%;
   font-size: 20px;
@@ -6292,4 +6370,177 @@ svg {
 }
 .not-found__btn {
   margin: 50px auto 0;
+}
+
+.thanks {
+  margin-top: -127px;
+  padding-bottom: 15px;
+}
+@media screen and (max-width: 743px) {
+  .thanks {
+    margin-top: -77px;
+    padding-bottom: 10px;
+  }
+}
+.thanks__wrap {
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  margin: 0 -35px;
+  padding: 187px 35px 160px;
+  min-height: calc(100svh - 30px);
+  width: calc(100% + 70px);
+  text-align: center;
+  background: #F3EDF3;
+  border-radius: 20px;
+}
+.thanks__wrap::after {
+  content: "";
+  position: absolute;
+  bottom: -68px;
+  left: -21px;
+  z-index: -1;
+  display: block;
+  width: 1455px;
+  height: 659px;
+  background-image: url(../img/nika-white.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+@media screen and (max-width: 1023px) {
+  .thanks__wrap {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .thanks__wrap {
+    padding: 120px 20px 34px;
+  }
+  .thanks__wrap::after {
+    left: -31px;
+  }
+}
+@media screen and (max-width: 743px) {
+  .thanks__wrap {
+    padding: 140px 10px 34px;
+    min-height: calc(100svh - 20px);
+  }
+  .thanks__wrap::after {
+    left: -18px;
+    width: 912px;
+    height: 413px;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 743px) {
+  .thanks__wrap {
+    margin: 0 -20px;
+    width: calc(100% + 40px);
+  }
+}
+@media screen and (max-width: 374px) {
+  .thanks__wrap {
+    margin: 0 -10px;
+    width: calc(100% + 20px);
+  }
+}
+.thanks__body {
+  margin: 0 auto;
+  max-width: 587px;
+  width: 100%;
+  text-align: center;
+}
+.thanks__img {
+  display: block;
+  margin: 0 auto 50px;
+  min-width: 288px;
+  width: 288px;
+  height: 165px;
+}
+.thanks__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media screen and (max-width: 743px) {
+  .thanks__img {
+    min-width: 230px;
+    width: 230px;
+    height: 132px;
+  }
+}
+.thanks__title {
+  display: block;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "TTBerlinerins", sans-serif;
+  font-size: 64px;
+  font-weight: normal;
+  line-height: 1.09375;
+  letter-spacing: -0.64px;
+  color: #F91045;
+}
+.thanks__title + .thanks__description {
+  margin-top: 10px;
+}
+.thanks__description {
+  display: block;
+  margin: 0 auto;
+  max-width: 490px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.2px;
+  color: #4F2549;
+}
+@media screen and (max-width: 743px) {
+  .thanks__description {
+    margin-top: 20px;
+    font-size: 16px;
+    letter-spacing: -0.16px;
+  }
+}
+.thanks__btn {
+  margin: 50px auto 0;
+}
+@media screen and (max-width: 1023px) {
+  .thanks__btn {
+    margin-top: 35px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .thanks__bottom {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    z-index: 1;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+  }
+}
+@media screen and (max-width: 1023px) {
+  .thanks__bottom {
+    margin-top: 40px;
+  }
 }
