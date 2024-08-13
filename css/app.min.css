@@ -3115,10 +3115,10 @@ svg {
 .main__img {
   display: block;
   overflow: hidden;
-  margin: 0 auto;
-  min-width: 1192px;
-  width: 1192px;
-  height: 533px;
+  margin: 0 calc(50% - 50vw);
+  min-width: 1394px;
+  width: 1394px;
+  height: 553px;
 }
 .main__img img {
   display: block;
@@ -3133,43 +3133,43 @@ svg {
 }
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
   .main__img {
-    min-width: 1012px;
-    width: 1012px;
-    height: 453px;
+    min-width: 1125px;
+    width: 1125px;
+    height: 447px;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
   .main__img {
-    min-width: 892px;
-    width: 892px;
-    height: 399px;
+    min-width: 955px;
+    width: 955px;
+    height: 379.5px;
   }
 }
 @media screen and (min-width: 744px) and (max-width: 1023px) {
   .main__img {
-    min-width: 664px;
-    width: 664px;
-    height: 297px;
+    min-width: 765px;
+    width: 765px;
+    height: 304px;
   }
 }
-@media screen and (min-width: 390px) and (max-width: 743px) {
+@media screen and (min-width: 375px) and (max-width: 743px) {
   .main__img {
-    min-width: 339px;
-    width: 339px;
-    height: 151px;
+    min-width: 384px;
+    width: 384px;
+    height: 152px;
   }
 }
-@media screen and (max-width: 389px) {
+@media screen and (max-width: 374px) {
   .main__img {
-    min-width: 280px;
-    width: 280px;
-    height: 125px;
+    min-width: 354px;
+    width: 354px;
+    height: 140px;
   }
 }
 .main__signature {
   display: block;
   overflow: hidden;
-  margin: 45px auto 0;
+  margin: 9px auto 0;
   min-width: 302px;
   width: 302px;
   height: 81px;
@@ -3183,7 +3183,7 @@ svg {
 }
 @media screen and (min-width: 744px) and (max-width: 1023px) {
   .main__signature {
-    margin-top: 47px;
+    margin-top: 19px;
   }
 }
 @media screen and (max-width: 743px) {
