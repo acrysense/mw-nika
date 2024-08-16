@@ -2221,11 +2221,29 @@ svg {
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
+.modal__wrap--sm {
+  max-width: 534px;
+}
+.modal__wrap--sm .modal__message {
+  padding: 20px 0;
+  min-height: auto;
+}
+@media screen and (min-width: 744px) and (max-width: 1023px) {
+  .modal__wrap--sm {
+    max-width: none;
+  }
+  .modal__wrap--sm .modal__wrapper {
+    padding: 60px;
+  }
+}
 @media screen and (max-width: 743px) {
   .modal__wrap {
     margin: 10px auto;
     padding: 0 10px;
     min-height: calc(100dvh - 20px);
+  }
+  .modal__wrap--sm .modal__wrapper {
+    padding: 60px 30px;
   }
 }
 .modal__wrapper {
@@ -2440,6 +2458,7 @@ svg {
 }
 
 .modal-message__body {
+  max-width: 100%;
   text-align: center;
 }
 .modal-message__title {
@@ -2464,6 +2483,19 @@ svg {
     letter-spacing: -0.64px;
   }
 }
+.modal-message__subtitle {
+  display: block;
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "TTBerlinerins", sans-serif;
+  font-size: 44px;
+  font-weight: normal;
+  line-height: 1.09375;
+  letter-spacing: -0.44px;
+  color: #F91045;
+}
 .modal-message__description {
   display: block;
   margin: 15px auto 0;
@@ -2474,6 +2506,17 @@ svg {
   line-height: 1.5;
   letter-spacing: -0.2px;
   color: #4F2549;
+}
+.modal-message__btn {
+  margin: 40px auto 0;
+  min-width: 314px;
+}
+@media screen and (max-width: 1023px) {
+  .modal-message__btn {
+    margin-top: 30px;
+    min-width: auto;
+    width: 100%;
+  }
 }
 
 .c-language__btn {
