@@ -3036,17 +3036,18 @@ svg {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   display: block;
   width: 100%;
   height: 100%;
   background: rgba(79, 37, 73, 0.4);
+  pointer-events: none;
 }
 .content-video.is--active::after {
   opacity: 0;
   visibility: hidden;
 }
-.content-video.is--active .content-video__media {
+.content-video.is--active .content-video__play, .content-video.is--active .content-video__media {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -3062,8 +3063,11 @@ svg {
   width: 68px;
   height: 68px;
   color: #FFFFFF;
+  pointer-events: none;
 }
 .content-video__media {
+  position: relative;
+  z-index: 2;
   display: block;
   width: auto;
   height: 100%;
@@ -5959,55 +5963,6 @@ svg {
   height: 397px;
   border-radius: 20px;
   cursor: pointer;
-}
-.about-media__video::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: rgba(79, 37, 73, 0.4);
-  -webkit-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-}
-.about-media__video::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 2;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: block;
-  width: 68px;
-  height: 68px;
-  background-image: url(../img/sprite.svg#icon-play);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
-  -webkit-transition: all 0.15s ease;
-  transition: all 0.15s ease;
-}
-.about-media__video > video {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.about-media__video.is--active::before {
-  opacity: 0;
-  pointer-events: none;
-}
-.about-media__video.is--active::after {
-  opacity: 0;
-  pointer-events: none;
 }
 @media screen and (min-width: 744px) and (max-width: 1199px) {
   .about-media__video {
