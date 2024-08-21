@@ -6203,8 +6203,14 @@ svg {
   width: -moz-fit-content;
   width: fit-content;
 }
+@media screen and (min-width: 744px) {
+  .contacts__item {
+    max-width: 360px;
+    min-width: 250px;
+  }
+}
 .contacts__item + .contacts__item {
-  margin-left: 85px;
+  margin-left: 45px;
 }
 @media screen and (max-width: 743px) {
   .contacts__item + .contacts__item {
